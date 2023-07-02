@@ -20,11 +20,8 @@ export default async function page({ params }: { params: { id: string } }) {
       <section className="flex flex-col gap-4">
         {userPosts.map((post) => {
           return (
-            <Link href={`/posts/${post.id}`}>
-              <div
-                key={post.id}
-                className="bg-blue-400 hover:bg-blue-500 rounded-xl p-2"
-              >
+            <Link key={post.id} href={`/posts/${post.id}`}>
+              <div className="bg-blue-400 hover:bg-blue-500 rounded-xl p-2">
                 <p className="underline">{post.title}</p>
                 <p>{post.body}</p>
               </div>
