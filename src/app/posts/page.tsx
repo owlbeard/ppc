@@ -10,11 +10,8 @@ export default async function page() {
       <h2 className="text-2xl p-4">You can find all the posts here:</h2>
       {posts.map(async (post) => {
         return (
-          <Link className="text-lg" href={`/posts/${post.id}`}>
-            <div
-              key={post.id}
-              className="bg-blue-400 hover:bg-blue-500 rounded-xl p-2"
-            >
+          <Link key={post.id} className="text-lg" href={`/posts/${post.id}`}>
+            <div className="bg-blue-400 hover:bg-blue-500 rounded-xl p-2">
               <p className=" underline text-xl">{post.title}</p>
               <p>{post.body}</p>
               {users
