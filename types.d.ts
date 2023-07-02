@@ -33,3 +33,13 @@ type Comments = {
   email: string;
   body: string;
 };
+
+type PaginationProps = {
+  page: number;
+  setPage: React.Dispatch<React.SetStateAction<number>>;
+};
+
+type PostsProps = {
+  posts: Posts[];
+  users: Users[];
+};

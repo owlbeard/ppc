@@ -20,7 +20,9 @@ export default function RootLayout({
       <body className={`${inter.className} bg-slate-600 text-white`}>
         <div className="container mx-auto h-screen flex flex-col">
           <Header />
-          <main className="flex-grow">{children}</main>
+          <main className="flex-grow flex flex-col justify-center items-center">
+            {children}
+          </main>
           <Footer />
         </div>
       </body>

@@ -7,9 +7,6 @@ export default function Header() {
       <div className="flex flex-col">
         <Link href="/">
           <h1 className="sm:text-6xl text-4xl">PPC</h1>
-          <p className="sm:text-4xl text-2xl">
-            Possibility, Positivity, Community
-          </p>
         </Link>
       </div>
       <Navbar />

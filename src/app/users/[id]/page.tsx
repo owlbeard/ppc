@@ -9,20 +9,26 @@ export default async function page({ params }: { params: { id: string } }) {
   const userPosts = posts.filter((post) => post.userId === user.id);
   return (
     <>
-      <section>
+      <section className="bg-gray-400 hover:bg-gray-500 p-2 rounded-xl text-2xl">
         <p>{user.name}</p>
         <p>@{user.username}</p>
         <p>E-mail: {user.email}</p>
         <p>Phone: {user.phone}</p>
         <p>Company: {user.company.name}</p>
       </section>
-      <section>
+      <h2 className="self-start text-2xl">All the posts of this user:</h2>
+      <section className="flex flex-col gap-4">
         {userPosts.map((post) => {
           return (
-            <div key={post.id}>
-              <Link href={`/posts/${post.id}`}>{post.title}</Link>
-              <p>{post.body}</p>
-            </div>
+            <Link href={`/posts/${post.id}`}>
+              <div
+                key={post.id}
+                className="bg-blue-400 hover:bg-blue-500 rounded-xl p-2"
+              >
+                <p className="underline">{post.title}</p>
+                <p>{post.body}</p>
+              </div>
+            </Link>
           );
         })}
       </section>
