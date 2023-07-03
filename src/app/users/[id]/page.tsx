@@ -9,7 +9,7 @@ export default async function page({ params }: { params: { id: string } }) {
   const userPosts = posts.filter((post) => post.userId === user.id);
   return (
     <>
-      <section className="bg-gray-400 hover:bg-gray-500 p-2 rounded-xl text-2xl">
+      <section className="bg-gray-400 hover:bg-gray-500 p-2 rounded-xl text-2xl mt-12">
         <p>{user.name}</p>
         <p>@{user.username}</p>
         <p>E-mail: {user.email}</p>
